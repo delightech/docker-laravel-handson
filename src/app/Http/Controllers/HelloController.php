@@ -11,6 +11,9 @@ class HelloController extends Controller
      */
     // http://localhost:10080/sample
     public function __invoke() {
+        $data = ['msg'=>'コントローラから渡されたメッセージ'];
+        return view('hello.index', $data);
+        /*
         // ヒアドキュメントでHTMLをレスポンスする
         return <<<EOF
 <html>
@@ -19,5 +22,6 @@ TEST 2
 </body>
 </html>
 EOF;
+*/
     }
 }
